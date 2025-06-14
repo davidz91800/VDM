@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="layout.js"></script>
+    <script>generateHead('Calculateur TAS & Rayon de virage');</script>
+</head>
+<body>
+    <div class="container">
+        <!-- Bouton retour -->
+        <a href="index.html" style="color: var(--primary-color); text-decoration: none; display: inline-block; margin-bottom: 20px;"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+
+        <header class="header-immersive">
+            <div class="header-main">
+                <img src="logocalc.png" alt="Logo Calculateur" class="header-logo">
+                <h1>Calculateur TAS<br>& Rayon de virage</h1>
+            </div>
+            <div class="header-credits">
+                <p>Calcule la Vitesse Vraie (TAS) et les rayons de virage correspondants en fonction des paramètres de vol et des conditions atmosphériques.</p>
+            </div>
+        </header>
+
+        <div class="input-section">
+            <h4>Paramètres de Vol</h4>
+            <div class="input-grid">
+                <div class="input-group"><label>IAS (kt)</label><input type="number" id="ias-input" min="100" max="300" value="180"></div>
+                <div class="input-group"><label>Altitude Indiquée (ft)</label><input type="number" id="altitude-input" min="0" max="40000" value="7000"></div>
+            </div>
+            <h4>Conditions Atmosphériques</h4>
+            <div class="input-grid">
+                <div class="input-group"><label>QNH (hPa)</label><input type="number" id="qnh-input" min="950" max="1050" value="1013.25" step="0.25"></div>
+                <div class="input-group"><label>Écart ISA (ΔISA °C)</label><input type="number" id="delta-isa-input" min="-20" max="20" value="0"></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="result-panel">
+            <div class="tas-result"><h3>Vitesse Vraie</h3><div id="tas-value"></div></div>
+            <div class="radius-results">
+                <div class="radius-grid">
+                    <div class="radius-item"><span class="angle">30°</span><span class="value" id="radius-30"></span></div>
+                    <div class="radius-item"><span class="angle">45°</span><span class="value" id="radius-45"></span></div>
+                    <div class="radius-item"><span class="angle">60°</span><span class="value" id="radius-60"></span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="details-accordion">
+            <button class="details-trigger">Voir le détail des calculs <span class="icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+            <div class="details-content" id="details-container"></div>
+        </div>
+    </div>
+
+    <script>generateFooterScripts(['calculator.js']);</script>
+</body>
+</html>

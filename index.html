@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="layout.js"></script>
+    <script>generateHead('Vol de Montagne');</script>
+</head>
+<body>
+    <div class="container home-container">
+        <img src="logocalc.png" alt="Logo" class="header-logo">
+        <h1>Vol de Montagne</h1>
+        
+        <div class="header-credits" style="margin-bottom: 2.5rem;">
+            <div style="font-size: 0.9rem; color: var(--text-muted-color);">Créé par le <strong>CDT ZEMMOUR David</strong> / Version 1.0</div>
+            <div class="header-contact">
+                <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a2 2 0 0 0-2 2v1.161l8.441 4.221a1.25 1.25 0 0 0 1.118 0L19 7.162V6a2 2 0 0 0-2-2H3Z" /><path d="M19 8.839l-7.77 3.885a2.75 2.75 0 0 1-2.46 0L1 8.839V14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.839Z" /></svg>
+                <span>Des suggestions ? <a href="mailto:david.zemmour@intradef.gouv.fr?subject=Application%20Vol%20de%20Montagne%20-%20Suggestion">Écrivez-moi</a>.</span>
+            </div>
+        </div>
+
+        <div class="app-grid">
+            <a href="tas_calculator.html" class="app-button">
+                <h2>Calculateur TAS & Rayon</h2>
+                <p>Calculez la vitesse vraie et les rayons de virage en fonction des conditions de vol.</p>
+            </a>
+            
+            <a href="gradient_calculator.html" class="app-button">
+                <h2>Calculateur de Gradient</h2>
+                <p>Estimez le gradient de montée en ft/NM basé sur les performances de l'aéronef.</p>
+            </a>
+
+            <!-- NOUVEAU BLOC AJOUTÉ -->
+            <a href="checklists.html" class="app-button">
+                <h2>Checklists Interactives</h2>
+                <p>Accédez aux checklists de procédures, sauvegardez votre progression.</p>
+            </a>
+            <!-- FIN DU BLOC AJOUTÉ -->
+        </div>
+    </div>
+    
+    <script>generateFooterScripts();</script>
+</body>
+</html>

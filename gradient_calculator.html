@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="layout.js"></script>
+    <script>generateHead('Calculateur de Gradient de Montée');</script>
+</head>
+<body>
+    <div class="container">
+        <!-- Bouton retour -->
+        <a href="index.html" style="color: var(--primary-color); text-decoration: none; display: inline-block; margin-bottom: 20px;"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+
+        <header class="header-immersive">
+            <div class="header-main">
+                <img src="logocalc.png" alt="Logo Calculateur" class="header-logo">
+                <h1>Calculateur<br>de Gradient</h1>
+            </div>
+             <div class="header-credits">
+                <!-- MODIFICATION : Le texte a été remplacé par la description détaillée -->
+                <p>Cet outil calcule le gradient de montée en ft/NM sur une tranche de 4000 ft pour différentes conditions d'ISA et de masse, basé sur les tableaux de performance "3-Engine Climb Performance" du CSTO_FR1C-130(C)J-1-1.</p>
+            </div>
+        </header>
+
+        <!-- L'ancien paragraphe descriptif qui était ici a été supprimé -->
+
+        <div class="input-section" style="margin-top: 2rem;"> <!-- Ajout d'une marge pour compenser la suppression du paragraphe -->
+            <h4>Paramètres de Calcul</h4>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="isa-range">Plage de Température ISA :</label>
+                    <select id="isa-range"></select>
+                </div>
+                <div class="input-group">
+                    <label for="altitude">Altitude de Référence (ft) :</label>
+                    <select id="altitude"></select>
+                </div>
+            </div>
+            <div class="input-group" style="margin-top: 20px;">
+                <label for="mass">Masse (lbs) :</label>
+                <input type="number" id="mass" value="110000" min="85000" max="175000" step="100">
+            </div>
+        </div>
+
+        <button id="calculate-button" class="details-trigger" style="margin-top: 30px; text-align: center; font-size: 1.2em;">Calculer le Gradient</button>
+
+        <div id="main-result-panel" class="result-panel" style="display:none; margin-top: 30px; padding: 20px;">
+            <!-- Le résultat principal sera injecté ici par le script -->
+        </div>
+        
+        <div id="details-panel" style="display:none; margin-top: 20px;">
+             <!-- Les détails seront injectés ici par le script -->
+        </div>
+    </div>
+
+    <script>generateFooterScripts(['performance_data.js', 'gradient_calculator.js']);</script>
+</body>
+</html>

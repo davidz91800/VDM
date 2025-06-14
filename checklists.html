@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="layout.js"></script>
+    <script>generateHead('Sélection de la Checklist');</script>
+</head>
+<body>
+    <div class="container">
+        <!-- Bouton retour -->
+        <a href="index.html" style="color: var(--primary-color); text-decoration: none; display: inline-block; margin-bottom: 20px;"><i class="fa-solid fa-arrow-left"></i> Retour à l'accueil</a>
+
+        <header class="header-immersive">
+            <div class="header-main">
+                <img src="logocalc.png" alt="Logo Checklist" class="header-logo">
+                <h1>Checklists</h1>
+            </div>
+             <div class="header-credits">
+                <p>Sélectionnez une checklist à effectuer. Votre progression est sauvegardée automatiquement.</p>
+            </div>
+        </header>
+
+        <div class="app-grid" style="margin-top: 2rem;">
+            <a href="checklist_viewer.html?id=checklist1" class="app-button">
+                <h2>Checklist 1</h2>
+                <p>Procédure avant la mise en route.</p>
+            </a>
+            <a href="checklist_viewer.html?id=checklist2" class="app-button">
+                <h2>Checklist 2</h2>
+                <p>Procédure de roulage et décollage.</p>
+            </a>
+            <a href="checklist_viewer.html?id=checklist3" class="app-button">
+                <h2>Checklist 3</h2>
+                <p>Procédure d'approche et atterrissage.</p>
+            </a>
+        </div>
+    </div>
+    
+    <script>generateFooterScripts();</script>
+</body>
+</html>

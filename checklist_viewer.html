@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="layout.js"></script>
+    <script>generateHead('Checklist');</script>
+</head>
+<body>
+    <div class="container">
+        <a href="checklists.html" style="color: var(--primary-color); text-decoration: none; display: inline-block; margin-bottom: 20px;"><i class="fa-solid fa-arrow-left"></i> Retour aux checklists</a>
+
+        <div class="checklist-header-controls">
+            <h1 id="checklist-title">Chargement...</h1>
+            <button id="reset-button" class="details-trigger" style="font-size: 0.9em; padding: 8px 15px; width: auto;"><i class="fa-solid fa-arrows-rotate"></i> Réinitialiser</button>
+        </div>
+
+        <div id="checklist-container" style="margin-top: 2rem;">
+            <!-- Le contenu de la checklist sera injecté ici par le script -->
+        </div>
+    </div>
+
+    <script>generateFooterScripts(['checklist_data.js', 'checklist.js']);</script>
+</body>
+</html>
